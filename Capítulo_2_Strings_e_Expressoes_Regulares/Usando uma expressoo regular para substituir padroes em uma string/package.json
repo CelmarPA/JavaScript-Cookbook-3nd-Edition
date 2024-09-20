@@ -1,0 +1,12 @@
+{
+  "name": "usando-uma-expressoo-regular-para-substituir-padroes-em-uma-string",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dv": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

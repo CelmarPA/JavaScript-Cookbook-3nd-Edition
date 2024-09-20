@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Página</title>
+</head>
+<body>
+    <!-- 
+            Para instalar o lite-server use npm com a opção --save-dev, assim não será implantado em uma compilação de produção, use npx lite-server para executar, para finalizar usar control + c.
+
+            Para rodar automaticamente o lite-server, basta editar o arquivo package.json adicionando as seguinte instrução:
+
+            {
+                "scripts": {
+                    "dev": "lite-server"
+                }
+            }
+
+            Depois de configura o package.json basta executar "npm run dev" para rodar o servidor
+    -->
+
+    <p>Esta é a página index</p>
+
+    <script>
+        if (window.location.protocol === "file:") {
+            console.log("Rodando com arquivo local");
+        } else if (window.location.host.startsWith("localhost")) {
+            console.log("Rodando em um servidor local");
+        } else {
+            console.log("Rodando em um servidor remoto");
+        }
+    </script>
+</body>
+</html>

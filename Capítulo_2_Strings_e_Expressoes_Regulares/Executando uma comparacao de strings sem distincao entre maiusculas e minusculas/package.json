@@ -1,0 +1,12 @@
+{
+  "name": "executando-uma-comparacao-de-strings-sem-distincao-entre-maiusculas-e-minusculas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

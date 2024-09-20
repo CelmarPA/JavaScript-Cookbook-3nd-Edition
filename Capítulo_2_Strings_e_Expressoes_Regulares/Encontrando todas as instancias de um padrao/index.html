@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrando Todas as Instâncias de um Padrão</title>
+    <style>
+        .encontrado {
+            background-color: rgb(255, 255, 0);
+        }
+
+        body {
+            margin: 15px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 350px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Encontrando Todas as Instâncias de um Padrão</h1>
+
+    <form action="#" id="buscarTexto">
+        <textarea name="InEntrada" id="inEntrada"></textarea>
+        <p>
+            Padão de busca: <input type="text" name="inPadrao" id="inPadrao">
+        </p>
+    </form>
+    <button type="button" id="submeterPesquisa">Buscar por Padrão</button>
+    <div id="resultadoPesquisa"></div>
+    <script src="destacandoCorrespondencias.js"></script>
+</body>
+</html>
