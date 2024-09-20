@@ -1,3 +1,5 @@
+'use strict'
+
 // "use strict"
 
 // Esta função adiciona uma lista de números consecutivos
@@ -16,7 +18,7 @@ let numFinal = 15;
 console.log(adicionarFaixa(numInicial, numFinal)); // Exibe 75
 
 // Agora adiciona números de 1 a 5
-numinicial = 1;
+numInicial = 1;
 numFinal = 5;
 
 console.log(adicionarFaixa(numInicial, numFinal)); // Exibe 0, onde esperamos 15
