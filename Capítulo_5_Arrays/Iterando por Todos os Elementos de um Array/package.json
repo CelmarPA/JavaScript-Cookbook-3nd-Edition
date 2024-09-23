@@ -1,0 +1,12 @@
+{
+  "name": "iterando-por-todos-os-elementos-de-um-array",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
