@@ -1,0 +1,12 @@
+{
+  "name": "copiando-uma-parte-de-uma-matriz-por-posicao",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

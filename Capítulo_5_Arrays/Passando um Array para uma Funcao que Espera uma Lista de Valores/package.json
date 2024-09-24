@@ -1,0 +1,12 @@
+{
+  "name": "passando-um-array-para-uma-funcao-que-espera-uma-lista-de-valores",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
