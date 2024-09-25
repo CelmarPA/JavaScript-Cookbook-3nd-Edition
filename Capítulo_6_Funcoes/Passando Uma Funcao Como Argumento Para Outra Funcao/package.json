@@ -1,0 +1,12 @@
+{
+  "name": "passando-uma-funcao-como-argumento-para-outra-funcao",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
