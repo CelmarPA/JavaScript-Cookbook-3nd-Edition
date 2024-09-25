@@ -1,0 +1,12 @@
+{
+  "name": "combinando-os-valores-de-um-array-em-um-unico-calculo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

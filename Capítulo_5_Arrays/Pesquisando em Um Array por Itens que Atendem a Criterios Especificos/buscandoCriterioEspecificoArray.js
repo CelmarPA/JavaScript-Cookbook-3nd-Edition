@@ -14,7 +14,7 @@
 const numeros = [2, 4, 19, 15, 183, 6, 7, 1, 1];
 
 // Encontra o primeiro valor acima de 10
-const numeroMaior = numeros.find(element => element > 10);
+const numeroMaior = numeros.find(elemento => elemento > 10);
 
 console.log(numeroMaior); // 19
 
@@ -22,7 +22,7 @@ console.log(numeroMaior); // 19
  *      Se em vez de encontrar o elemento correspondente, você preferir 
  *      saber sua posição, você pode usar o método similar findIndex():
 */
-const indiceNumeroMaior = numeros.findIndex(element => element > 100);
+const indiceNumeroMaior = numeros.findIndex(elemento => elemento > 100);
 
 console.log(indiceNumeroMaior); // 4 (primeira correspondência)
 

@@ -1,0 +1,12 @@
+{
+  "name": "criando-uma-colecao-de-itens-indexados-por-chave",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
