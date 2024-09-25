@@ -1,0 +1,12 @@
+{
+  "name": "pesquisando-em-um-array-por-itens-que-atendem-a-criterios-especificos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
