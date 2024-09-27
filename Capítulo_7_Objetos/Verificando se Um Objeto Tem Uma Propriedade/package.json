@@ -1,0 +1,12 @@
+{
+  "name": "verificando-se-um-objeto-tem-uma-propriedade",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

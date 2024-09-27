@@ -1,0 +1,12 @@
+{
+  "name": "personalizando-a-maneira-como-uma-propriedade-e-definida",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
