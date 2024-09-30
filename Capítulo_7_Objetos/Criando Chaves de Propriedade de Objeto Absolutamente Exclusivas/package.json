@@ -1,0 +1,12 @@
+{
+  "name": "criando-chaves-de-propriedade-de-objeto-absolutamente-exclusivas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
