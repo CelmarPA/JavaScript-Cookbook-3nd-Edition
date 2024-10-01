@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Módulo</title>
+</head>
+<body>
+    <h1>Teste Módulo</h1>
+    <button id="btnConversao">Fazer Conversão de Amostra</button>
+
+    <script type="module">
+        import {Unidades, ConversorComprimento} from "./moduloConversorComprimento.js";
+
+        function fazerConversaoAmostra() {
+            const comprimentoEmMilhas = 495;
+
+            // Isso funciona porque você tem acesso ao ConversorComprimento e Unidades
+            const comprimentoEmElefantes = ConversorComprimento.Converter(comprimentoEmMilhas, Unidades.Pes, Unidades.Jardas);
+
+            alert(comprimentoEmElefantes);
+
+            // Isso não funcionaria, porque você não tem acesso ao LoggerInvisivel
+            //LoggerInvisivel.log();
+        }
+
+        // Conecte o botão
+        document.getElementById("btnConversao").addEventListener("click", fazerConversaoAmostra);
+    </script>
+</body>
+</html>
