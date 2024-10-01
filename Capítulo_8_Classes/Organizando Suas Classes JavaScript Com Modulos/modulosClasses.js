@@ -129,4 +129,4 @@ import CConverter from "./moduloConversorComprimento.js";
  *      O recurso de exportação padrão corresponde a uma funcionalidade 
  *      semelhante em outros sistemas de módulos. Isso torna mais fácil 
  *      para esses módulos serem migrados para o padrão de módulos ES6.
- */
+*/
