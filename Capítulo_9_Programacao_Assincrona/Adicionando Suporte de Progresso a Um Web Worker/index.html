@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando Web Wokers para Buscar Números Primos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p>
+        Busque os números primos de <input id="inicio" value="1"> até <input id="fim" value="1000000">.
+    </p>
+    <button id="buscar">Começar</button>
+    <button id="cancelar">Cancelar</button>
+    <button id="limpar">Limpar</button>
+
+    <div id="primoContainer"></div>
+    <div id="status"></div>
+
+    <script src="webWorkerProgresso.js"></script>
+</body>
+</html>
