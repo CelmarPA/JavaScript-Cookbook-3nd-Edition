@@ -23,7 +23,9 @@ describe ("Teste função fatorar()", () => {
         expect(fatorar(5)).toBe(120);
     });
 
-    test("NaN é 0", () => {
-        expect(fatorar(NaN)).toBe(0);
+    test("NaN causa erro", () => {
+        expect(() => {
+            fatorar(NaN);
+        }).toThrow();
     });
-})
+});

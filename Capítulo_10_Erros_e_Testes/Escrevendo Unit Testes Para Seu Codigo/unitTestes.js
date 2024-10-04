@@ -210,5 +210,82 @@ describe("Teste função fatorar()", () => {
  *      Some of the most useful matching functions you can use with 
  *      expect() are:
  * 
+ *          arrayContaining(): Pesquisa um valor fornecido em um array.
+ * 
+ *          not(): Permite que você reverta qualquer condição. Por 
+ *                 exemplo, usar expect(...).not.toBe(5)` passa se o 
+ *                 valor não for 5.
+ * 
+ *          stringContaining(): Pesquisa uma substring em uma string.
+ * 
+ *          stringMatching(): Tenta corresponder uma string a uma 
+ *                            expressão regular.
+ * 
+ *          toBe(): Testa a igualdade padrão do JavaScript, como se você 
+ *                  usasse o operador ==.
+ * 
+ *          toBeCloseTo(): Testa se dois números são iguais ou muito 
+ *                         próximos. Destinado a evitar erros de 
+ *                         arredondamento de minutos com números de ponto 
+ *                         flutuante.
+ * 
+ *          toBeGreaterThan(): Verifica se um valor numérico é maior que 
+ *                             o valor que você especificou. Há um 
+ *                             pequeno conjunto de matchers semelhantes 
+ *                             para diferentes comparações, incluindo 
+ *                             toBeGreaterThanOrEqual(), toBe LessThan() 
+ *                             e toBeLessThanOrEqual().
+ * 
+ *          toBeInstanceOf(): Verifica se um objeto retornado é uma 
+ *                            instância de uma classe especificada, como 
+ *                            se você usasse o operador instanceof.
+ * 
+ *          toBeNull(): Verifica se um valor é null. Você também pode 
+ *                      testar valores NaN com toBeNaN() e valores 
+ *                      undefined com toBeUndefined().
  *          
+ *          toBeTruthy(): Testa se um número é verdadeiro, o que 
+ *                        significa que ele será forçado a verdadeiro em 
+ *                        uma declaração if. Em JavaScript, tudo é 
+ *                        verdadeiro, exceto null, undefined, strings 
+ *                        vazias, NaN, 0 e false.
+ * 
+ *          toEqual(): Executa uma comparação profunda que verifica se um 
+ *                     objeto tem o mesmo conteúdo que outro. Isso está 
+ *                     em contraste com toBe(), que testa igualdade de 
+ *                     referência para objetos. Como regra geral, toBe() 
+ *                     funciona para tipos primitivos, mas toEqual() é o 
+ *                     que você precisa para comparar instâncias de 
+ *                     objetos.
+ * 
+ *          toHaveProperty(): Verifica se um objeto retornado tem uma 
+ *                            propriedade específica e (opcionalmente) se 
+ *                            essa propriedade corresponde a um 
+ *                            determinado valor.
+ * 
+ *          toStrictEqual(): Semelhante a toEqual(), mas requer que os 
+ *                           objetos correspondam exatamente. Por 
+ *                           exemplo, objetos com as mesmas propriedades 
+ *                           e valores de propriedade não corresponderão 
+ *                           se forem instâncias de diferentes classes, 
+ *                           ou se um for uma instância de classe e o 
+ *                           outro um objeto literal.
+ * 
+ *          toThrow(): Testa se a função lança uma exceção. Você pode 
+ *                     opcionalmente exigir que a exceção seja um objeto 
+ *                     de erro específico.
+ * 
+ *      Para corrigir o exemplo atual, você pode indicar que espera que 
+ *      um valor de NaN lance uma exceção com o matcher toThrow(). No 
+ *      entanto, toThrow() requer uma etapa extra. Você precisa 
+ *      encapsular o código dentro de expect() dentro de outra função 
+ *      anônima.
+ * 
+ *      Caso contrário, a exceção não será capturada e o teste ainda 
+ *      falhará. Aqui está o código correto:
  */
+test("NaN causa erro", () => {
+    expect(() => {
+        fatorar(NaN);
+    }).toThrow();
+});
