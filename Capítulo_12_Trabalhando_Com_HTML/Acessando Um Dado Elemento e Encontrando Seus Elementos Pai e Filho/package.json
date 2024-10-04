@@ -1,0 +1,12 @@
+{
+  "name": "acessando-um-dado-elemento-e-encontrando-seus-elementos-pai-e-filho",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
