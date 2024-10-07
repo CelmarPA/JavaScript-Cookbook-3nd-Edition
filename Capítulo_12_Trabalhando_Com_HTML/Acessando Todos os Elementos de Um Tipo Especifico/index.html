@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="py-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeList</title>
+</head>
+<body>
+
+    <h1>Acessando Todos os Elementos de Um Tipo Específico</h1>
+
+    <p><img src="img/primeiraImagem.jpg" alt="descrição da imagem"></p>
+    <p><img src="img/segundaImagem.jpg" alt="descrição da imagem"></p>
+    <p><img src="img/terceiraImagem.jpg" alt="descrição da imagem"></p>
+
+    <script src="acessandoTodosElementosTipoEspecifico.js"></script>
+    <script>
+        const imagens = document.getElementsByTagName("img");
+        console.log(imagens.length);
+        const p = document.createElement("p");
+        const imagem = document.createElement("img");
+
+        imagem.src = "img/algumaImagem.jpg";
+        p.appendChild(imagem);
+
+        const paragrafos = document.getElementsByTagName("p");
+        paragrafos[0].parentNode.appendChild(p);
+
+        console.log(imagens.length);
+    </script>
+</body>
+</html>
