@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluindo Linhas de Uma Tabela HTML</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td, th {
+            padding: 5px;
+            border: 1px solid #ccc
+        }
+
+        td:nth-child(2n + 1) {
+            background-color: #eeffee;
+        }
+    </style>
+</head>
+<body>
+    <h1>Excluindo Linhas de Uma Tabela HTML</h1>
+
+    <table id="misturado">
+        <tr>
+            <th>Valor Um</th>
+            <th>Valor Dois</th>
+            <th>Valor Três</th>
+        </tr>
+    </table>
+
+    <div id="resultado"></div>
+
+    <script src="excluindoLinhasTabela.js"></script>
+</body>
+</html>

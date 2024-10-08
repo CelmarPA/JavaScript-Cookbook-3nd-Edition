@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validando Formulários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Validando Formulários</h1>
+
+    <form action="" id="testeform">
+        <div>
+            <label for="primeiro-campo">*Primeiro Campo:</label><br>
+            <input type="text" name="primeiro-campo" id="primeiro-campo" aria-required="true" required>
+        </div>
+        <div>
+            <label for="segundo-campo">Segundo Campo:</label>
+            <input type="text" name="segundo-campo" id="segundo-campo">
+        </div>
+        <div>
+            <label for="terceiro-campo">Terceiro Campo (numérico):</label>
+            <input type="text" name="terceiro-campo" id="terceiro-campo">
+        </div>
+        <div>
+            <label for="quarto-campo">Quarto Campo:</label>
+            <input type="text" name="quarto-campo" id="quarto-campo">
+        </div>
+
+        <input type="submit" value="Enviar Dados">
+    </form>
+
+    <script src="validarForm.js"></script>
+</body>
+</html>

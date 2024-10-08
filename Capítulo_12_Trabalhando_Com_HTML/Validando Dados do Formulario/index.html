@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validando Dados Do Formulário</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.7.0/validator.min.js"></script>
+    <style>
+        [aria-invalid] {
+            background-color: #f5b2b2;
+        }
+
+        input {
+            margin: 10px 0;
+            padding: 5px;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Validando Dados Do Formulário</h1>
+
+    <form action="#" id="exemplo" name="exemplo" method="post">
+        <fieldset>
+            <legend>Exemplo Formulário</legend>
+            <div>
+                <label for="email">Email (obrigatório):</label>
+                <input type="email" name="email" id="email" value="" required>
+            </div>
+            <div>
+                <label for="cep">Cep:</label>
+                <input type="text" name="cep" id="cep" value="">
+            </div>
+            <div id="erro"></div>
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+        </fieldset>
+    </form>
+    
+    <script src="validandoDadosFormulario.js"></script>
+</body>
+</html>

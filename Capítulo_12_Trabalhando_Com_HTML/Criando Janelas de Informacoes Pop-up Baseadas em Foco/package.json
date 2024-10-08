@@ -1,0 +1,12 @@
+{
+  "name": "criando-janelas-de-informacoes-pop-up-baseadas-em-foco",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

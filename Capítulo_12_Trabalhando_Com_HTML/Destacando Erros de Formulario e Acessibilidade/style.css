@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+[aria-invalid] {
+    background-color: #ffeeee;
+}
+
+[role="alert"] {
+    background-color: #ffcccc;
+    font-weight: bold;
+    padding: 5px;
+    border: 1px dashed #000;
+}
+
+div {
+    margin: 10px 0;
+    padding: 5px;
+    width: 400px;
+    background-color: #ffffff;
+}
