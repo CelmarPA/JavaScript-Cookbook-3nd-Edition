@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviando Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Enviando Formulário</h1>
+
+    <p>Para executar o exemplo, inicie o servidor Node em uma aba de terminal separada:</p>
+
+    <pre>
+        <code>
+            cd server
+            npm start
+        </code>
+    </pre>
+    <form action="#" id="meu-form">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome">
+
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email">
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea name="mensagem" id="mensagem"></textarea>
+
+        <button>Enviar</button>
+    </form>
+    <script src="enviandoFormulario.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "enviando-dados-binarios-e-carregando-em-uma-imagem",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

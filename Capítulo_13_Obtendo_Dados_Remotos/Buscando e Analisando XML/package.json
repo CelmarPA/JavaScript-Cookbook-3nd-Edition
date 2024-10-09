@@ -1,0 +1,15 @@
+{
+  "name": "buscando-e-analisando-xml",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "xmldom": "^0.6.0"
+  }
+}
