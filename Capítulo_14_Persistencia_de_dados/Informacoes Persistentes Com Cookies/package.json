@@ -1,0 +1,12 @@
+{
+  "name": "informacoes-persistentes-com-cookies",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+div {
+    margin: 10px;
+}
+
+.dados {
+    width: 100px;
+    background-color: yellow;
+    padding: 5px;
+}
