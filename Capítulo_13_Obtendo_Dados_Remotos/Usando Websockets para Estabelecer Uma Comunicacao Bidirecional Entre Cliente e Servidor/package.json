@@ -1,0 +1,12 @@
+{
+  "name": "usando-websockets-para-estabelecer-uma-comunicacao-bidirecional-entre-cliente-e-servidor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
