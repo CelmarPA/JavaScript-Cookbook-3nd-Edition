@@ -1,0 +1,12 @@
+{
+  "name": "simplificando-indexeddb-com-uma-biblioteca",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

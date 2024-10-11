@@ -1,0 +1,12 @@
+{
+  "name": "criando-um-item-localstorage-de-armazenamento-dados-do-lado-do-cliente",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

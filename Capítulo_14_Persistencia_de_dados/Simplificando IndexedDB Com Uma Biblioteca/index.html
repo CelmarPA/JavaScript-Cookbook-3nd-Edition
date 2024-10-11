@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-nr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo IDB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Exemplo IDB</h1>
+
+    <form action="#">
+        <div>
+            <label for="Nome">Digite o nome:</label>
+            <input type="text" name="nome" id="nome">
+        </div>
+
+        <div>
+            <label for="idade">Digite a idade:</label>
+            <input type="text" name="idade" id="idade">
+        </div>
+    </form>
+
+    <button id="definir">Definir Dados</button>
+    <button id="obter">Obter Dados</button>
+    <button id="deletar" confirm>Deletar Dados</button>
+
+    <p>Dados:</p>
+    <div class="dados">
+        <ul id="listaDados"></ul>
+    </div>
+
+    <script type="module" src="idbExemplo.js"></script>
+</body>
+</html>
