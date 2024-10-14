@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG no Objeto</title>
+</head>
+<body>
+    <object id="objeto" data="demo.svg" type="image/svg+xml">
+        <p>SVG Não Suportado</p>
+    </object>
+    <script>
+        const objeto = document.getElementById("objeto");
+        objeto.onload =  function () {
+            let svgdoc;
+
+            // Obtém acesso ao objeto do documento SVG
+            try {
+                svgdoc = objeto.contentDocument;
+            } catch (e) {
+                try {
+                    svgdoc = objeto.getSVGDocument();
+                } catch (erro) {
+                    console.log(erro, "SVG no objeto não suportado neste ambiente");
+                }
+            }
+
+            if (!svgdoc) return;
+
+            // Obtém o elemento SVG e modifica
+            const quadrado = svgdoc.getElementById("quadrado");
+            quadrado.onclick = function () {
+                let width = parseFloat(quadrado.getAttribute("width"));
+                width -= 50;
+                quadrado.setAttribute("width", width);
+                const cor = quadrado.getAttribute("fill");
+                if (cor === "blue") {
+                    quadrado.setAttribute("fill", "yellow");
+                    quadrado.setAttribute("stroke", "green");
+                } else {
+                    quadrado.setAttribute("fill", "blue");
+                    quadrado.setAttribute("stroke", "red");
+                }
+            };
+        };
+    </script>
+</body>
+</html>

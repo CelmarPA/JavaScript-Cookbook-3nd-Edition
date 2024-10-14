@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessando SVG Inline</title>
+</head>
+<body>
+    <svg width="600" heught="600">
+        <script>
+            // Define o manipulador de eventos onclick do elemento
+            window.onload = function () {
+                const quadrado = document.getElementById("quadrado");
+
+                // Manipulador de eventos onclick, altera o raio do círculo
+                quadrado.onclick = function click() {
+                    const cor = this.getAttribute("fill");
+                    if (cor === "#ff0000") {
+                        this.setAttribute("fill", "#0000ff");
+                    } else {
+                        this.setAttribute("fill", "#ff0000");
+                    }
+                };
+            };
+        </script>
+        <rect id="quadrado" width="400" height="400" fill="#ff0000" x="10" y="10"></rect>
+    </svg>
+</body>
+</html>

@@ -1,0 +1,44 @@
+/**
+ *      
+*/
+<!-- 
+        Você deseja adicionar JavaScript a um arquivo ou elemento SVG.
+   
+        JavaScript em SVG é incluído em elementos de script, assim como 
+        em HTML, exceto com a adição de marcação CDATA em torno do 
+        script. Métodos DOM também estão disponíveis para trabalhar com 
+        os elementos SVG.
+-->
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="600">
+    <script type="text/ecmascript">
+        <![CDATA[
+            // Define o manipulador de eventos onclick do elemento
+            window.onload = function() {
+                const square = document.getElementById('square');
+                // Manipulador de eventos onclick, altera o raio do círculo
+                square.onclick = function click() {
+                    const color = this.getAttribute('fill');
+                    if (color === '#ff0000') {
+                        this.setAttribute('fill', '#0000ff');
+                    } else {
+                        this.setAttribute('fill', '#ff0000');
+                    }
+                };
+            };
+        ]]>
+    </script>
+    <rect id="square" width="400" height="400" fill="#ff0000"
+        x="10" y="10" />
+</svg>
+
+<!-- 
+        Como a solução demonstra, SVG é XML, e as regras para incorporar script em XML devem ser respeitadas. Isso significa fornecer o tipo de script dentro da tag script , bem como envolver o conteúdo do script em um bloco CDATA. Se você não tiver a seção CDATA, e seu script usar caracteres como < ou &, sua página terá erros, porque o analisador XML os trata como caracteres XML, não script.
+
+        Os métodos DOM, como document.getElementById(), não são específicos de HTML; eles podem ser usados ​​com qualquer documento XML, incluindo SVG. O que há de novo é o atributo fill específico do SVG, um atributo exclusivo para elementos SVG, como rect.
+
+        Se namespaces fossem usados ​​com qualquer um dos elementos no arquivo, então a versão do namespace dos métodos DOM teria que ser usada.
+
+        O código na solução é um arquivo SVG autônomo, com uma extensão .svg. Se fôssemosincorporar o SVG em um arquivo HTML, a animação de mudança de cor funcionaria da mesma forma. A seção CDATA é removida porque todos os navegadores modernos entendem que o SVG agora está em um contexto HTML. Se o arquivo for XHTML, porém, adicione-os de volta.
+->

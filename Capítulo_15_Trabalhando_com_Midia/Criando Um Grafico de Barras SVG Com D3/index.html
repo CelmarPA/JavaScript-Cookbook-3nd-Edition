@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Barras SVG Usando D3</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.min.js"></script>
+</head>
+<body>
+    <script>
+        const dados = [56, 99, 14, 12, 46, 33, 22, 100, 87, 6, 55, 44, 27, 28, 34];
+
+        const altura = 400;
+        const barraLargura = 25;
+
+        const x = d3
+            .scaleLinear()
+            .domain([0, d3.max(dados)])
+            .range([0, altura]);
+
+        const svg =  d3
+            .select("body")
+            .append("svg")
+            .attr("width", dados.lenght * (barraLargura + 1))
+            .attr("height", altura);
+
+        svg
+            .selectAll("rect")
+            .data(dados)
+            .enter()
+            .append("rect")
+            .attr("fill", "#008b8b")
+            .attr("x", function (d, i) {
+                return i * (barraLargura + 1);
+            })
+            .attr("y", function (d) {
+                return altura - x(d);
+            })
+            .attr("width", barraLargura)
+            .attr("height", x);
+    </script>
+</body>
+</html>
+
+<!-- 
+        Primeiro de tudo, esteja ciente de que o D3 faz uso de encadeamento de métodos em um grau máximo. Sim, você pode invocar métodos separadamente, mas é mais claro, limpo e eficiente usar o suporte de encadeamento da biblioteca.
+
+        Na solução, a primeira linha é a criação de um conjunto de dados como uma matriz. D3 espera que os pontos de dados estejam em uma matriz, embora cada elemento possa ser um objeto, bem como um valor simples, conforme mostrado na solução. Em seguida, a altura máxima do gráfico de barras é definida, assim como a largura de cada barra. Em seguida, entramos no primeiro uso de D3.
+
+        Eu poderia ter adicionado um elemento SVG estático à página da web, mas queria demonstrar como o D3 cria um elemento. Ao criar o elemento SVG, também estamos obtendo uma referência a ele para trabalho futuro, embora pudéssemos ter usado o D3 para obter uma referência a um elemento existente. No código, uma referência ao elemento body é obtida usando o método select() do D3. Quando isso acontece, um novo elemento SVG é anexado ao elemento body via append(), e atributos são dados a ele via função attr(). A altura do elemento já está predefinida, mas a largura é igual à multiplicação do número de elementos de dados pela largura da barra (+1, para fornecer o espaçamento necessário).
+
+        Depois que o elemento SVG é criado, o código usa a funcionalidade de escala do D3 para determinar a proporção necessária entre a altura do elemento e a altura de cada barra, de tal forma que o gráfico de barras preencha o elemento SVG, mas a altura de cada barra seja proporcional. Ele faz isso usando scale.linear() para criar uma escala linear. De acordo com a documentação do D3, “O mapeamento é linear, pois o valor do intervalo de saída y pode ser expresso como uma função linear do valor do domínio de entrada x: y = mx + b.”
+
+        A função domain() define o domínio de entrada para a escala, enquanto a função range() define o intervalo de saída. Na solução, o valor fornecido para o domínio é zero até o valor máximo no conjunto de dados, determinado por meio de uma chamada para max(). O valor fornecido para o intervalo é zero até a altura do elemento SVG. Uma função é então retornada para uma variável que normalizará quaisquer dados passados ​​a ela quando chamada. Se a função receber um valor igual à altura do maior valor de dados, o valor retornado será igual à altura do elemento (nesse caso, o maior valor de dados de 100 retorna um valor dimensionado de 400).
+
+        A última parte do código é a parte que cria as barras. Precisamos de algo para trabalhar, então o código chama selectAll() com rect. Não há nenhum elemento rect no bloco SVG ainda, mas iremos adicioná-los. Os dados são passados ​​para D3 através do método data(), e então a função enter() é chamada. O que enter() faz é processar os dados e retornar marcadores de posição para todos os elementos ausentes. Na solução, marcadores de posição para todos os 15 elementos rect, um para cada barra, são criados.
+
+        Um elemento rect é então anexado ao elemento SVG com append(), e os atributos para cada um são definidos com attr(). Na solução, o preenchimento e o traço são fornecidos, embora estes pudessem ter sido definidos na folha de estilo da página. A seguir, a posição para o atributo x, ou o atributo inferior esquerdo para a barra, é fornecido como uma função, onde d é o dado atual (valor de dados) e i é o índice atual. Para o atributo x, o índice é multiplicado por barraLargura, mais um (1), para contabilizar o espaçamento.
+
+        Para o atributo y, temos que ser um pouco complicados. O ponto de origem do SVG é o canto superior esquerdo, o que significa que valores crescentes de y vão para baixo no gráfico, não para cima. Para reverter isso, precisamos subtrair o valor de y da altura. No entanto, não podemos simplesmente fazer isso diretamente. Se o código usasse o dado passado diretamente a ele, teríamos um gráfico proporcional com barras muito pequenas e amassadas. Em vez disso, precisamos usar a função de escala recém-criada, x, passando o dado para ela.
+
+        A largura de cada barra é um valor constante dado em barraLargura, e a altura é apenas a variável da função scale, que é equivalente a chamar a função scale e passar o dado.
+-->
+    

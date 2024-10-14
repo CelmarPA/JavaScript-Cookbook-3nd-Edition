@@ -1,0 +1,12 @@
+{
+  "name": "executando-uma-rotina-quando-um-arquivo-de-audio-comeca-tocando",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

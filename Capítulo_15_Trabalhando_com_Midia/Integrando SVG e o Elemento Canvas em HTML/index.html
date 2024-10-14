@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrando SVG e o Elemento Canvas em HTML</title>
+</head>
+<body>
+    <canvas id="meuCanvas" width="400px" height="100px">
+        <p>Conteúdo Alternativo do Item Canvas</p>
+    </canvas>
+
+    <svg id="svgElemento" height="400">
+        <title>Círculo SVG</title>
+        <script>
+            window.onload = function () {
+                var contexto = document.getElementById("meuCanvas").getContext("2d");
+                contexto.fillStyle = "rgba(0, 200, 0, 0.7)";
+                contexto.fillRect(0, 0, 100, 100);
+            }
+        </script>
+        <circle id="circuloVermelho" cx="100" cy="100" r="100" fill="red" stroke="#000"></circle>
+    </svg>
+</body>
+</html>

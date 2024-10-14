@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controlando Vídeo a Partir de JavaScript Com o Elemento video</title>
+    <style>
+        video {
+            border: 1px solid black;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Controlando Vídeo a Partir de JavaScript Com o Elemento video</h1>
+    <!-- <video id="prado" controls> -->
+    <video id="prado">
+        <source src="meadow.mp4" type="video/mp4">
+        <source src="meadow.webm" type="video/webm">
+    </video>
+
+    <div id="feedback"></div>
+    <div id="controles">
+        <button id="iniciar">Reproduzir</button>
+        <button id="parar">Parar</button>
+        <button id="pausar">Pausar</button>
+    </div>
+
+    <script src="controlandoVideocomElementovideo.js"></script>
+</body>
+</html>

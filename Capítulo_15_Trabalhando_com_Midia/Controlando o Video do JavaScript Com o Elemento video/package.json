@@ -1,0 +1,12 @@
+{
+  "name": "controlando-o-video-do-javascript-com-o-elemento-video",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

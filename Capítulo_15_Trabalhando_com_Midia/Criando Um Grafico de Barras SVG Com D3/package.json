@@ -1,0 +1,12 @@
+{
+  "name": "criando-um-grafico-de-barras-svg-com-d3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
