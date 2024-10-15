@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+#copia-texto {
+    position: absolute;
+    left: -9999px;
+    height: 0;
+    width: 0;
+}

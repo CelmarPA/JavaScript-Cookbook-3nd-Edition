@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo PWA</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Link para o arquivo maninfest.json -->
+    <link rel="manifest" href="manifest.json">
+    <!-- Links para icones IOS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+    <!-- Configurações de cores e ícones de blocos de aplicativos da Microsoft -->
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="msapplication-TileImage" content="images/icons/mstile-310x310.png">
+    <!-- Define cor do tema -->
+    <meta name="theme-color" content="#ffc40d">
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <h1>Exemplo PWA</h1>
+        </div>
+    </header>
+
+    <main class="primary-content">
+        <div class="wrapper">
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda aliquid recusandae dolore, magnam iusto dolorem ipsum impedit repudiandae qui accusamus cupiditate sequi at. Vitae totam, quod voluptates ea praesentium quo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae sint nesciunt doloribus ex fugit officiis, nobis quidem, odit perferendis nostrum accusantium qui. Est asperiores repudiandae esse quidem molestias, numquam tenetur.
+            </p>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function () {
+                navigator.serviceWorker
+                    .register("service-worker.js")
+                    .then(reg => {
+                        console.log("Service worker registrado!", reg);
+                    })
+                    .catch(erro => {
+                        console.log("Registro do Service worker falhou: ", erro);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

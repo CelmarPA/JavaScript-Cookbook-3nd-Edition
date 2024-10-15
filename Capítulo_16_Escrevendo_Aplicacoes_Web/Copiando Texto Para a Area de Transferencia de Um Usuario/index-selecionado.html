@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copiando Texto Selecionado Para a Área de Transferência de Um Usuário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 
+            Neste exemplo, usei um elemento textarea e configurei o tabindex para removê-lo do fluxo de abas do usuário, depois configurei aria-hidden como true para que os leitores de tela saibam ignorar o elemento.
+
+            No meu CSS, eu escondi o elemento colocando-o fora da tela e dando a ele um valor de altura e largura de 0:
+    -->
+
+    <h1>Copiando Texto Selecionado Para a Área de Transferência de Um Usuário</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam labore eligendi velit sit, quas iste fuga fugit architecto vel alias incidunt, ea illum accusantium et modi, odit voluptatum culpa laboriosam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nesciunt natus nobis, architecto culpa, ullam et perspiciatis id non debitis dolor quam fuga veniam a, facilis omnis reiciendis libero labore. Maiores fugit delectus, labore laudantium earum totam voluptates, suscipit quisquam illo praesentium consequatur omnis aut in nostrum, velit quaerat ratione cupiditate iusto. Voluptatum iusto reiciendis, velit similique architecto cupiditate. Quidem, minus quia! Asperiores delectus vel ullam quo officiis veritatis consequuntur incidunt mollitia, nostrum laboriosam. Laboriosam architecto minima maiores necessitatibus labore impedit ut non quae ea expedita omnis qui, quas eos explicabo. Rerum numquam, ex provident qui delectus alias, praesentium animi repellat perferendis quasi omnis soluta mollitia distinctio nobis officia temporibus amet enim obcaecati! Laboriosam beatae, soluta cum ab mollitia velit vel maiores incidunt id possimus aspernatur assumenda voluptates blanditiis excepturi fuga dolores illum quam expedita odit quidem eligendi nihil? Sed, eaque. Iure inventore, voluptates eos alias quia assumenda necessitatibus maxime?
+    </p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda accusamus sit voluptate. Expedita quo cumque consequatur! Earum nisi dignissimos sint accusantium nesciunt explicabo tempora facere impedit reiciendis, sequi, quos dolor.</p>
+
+    <textarea id="copia-texto" tabindex="-1" aria-hidden="true"></textarea>
+    <button type="button" id="copia-botao">Copie o Texto Destacado</button>
+
+    <script src="copiandoTextoSelecionadoParaAreaTransferencia.js"></script>
+</body>
+</html>
