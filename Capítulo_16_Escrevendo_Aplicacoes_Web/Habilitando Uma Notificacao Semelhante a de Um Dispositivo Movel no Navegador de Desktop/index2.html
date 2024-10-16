@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibilidade</title>
+</head>
+<body>
+    <h1>Visibilidade</h1>
+
+    <div id="resultado"></div>
+
+    <script>
+        if (window.Notification) {
+            Notification.requestPermission(() => {
+                setTimeout(() => {
+                    if (document.visibilityState === "hidden") {
+                        const notificacao = new Notification("Ei acorde", {
+                            body: "Seu processo está terminado",
+                            icon: "favicon.ico"                           
+                        });
+                        notificacao();
+                    } else {
+                        document.getElementById("resultado").innerHTML = "Seu processo está terminado";
+                    }
+                }, 5000);
+            });
+        }
+    </script>
+</body>
+</html>

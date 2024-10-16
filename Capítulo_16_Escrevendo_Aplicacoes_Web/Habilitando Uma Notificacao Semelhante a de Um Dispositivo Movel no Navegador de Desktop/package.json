@@ -1,0 +1,12 @@
+{
+  "name": "habilitando-uma-notificacao-semelhante-a-de-um-dispositivo-movel-no-navegador-de-desktop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

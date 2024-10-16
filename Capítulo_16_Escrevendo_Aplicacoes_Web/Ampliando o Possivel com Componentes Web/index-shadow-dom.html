@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Components</title>
+</head>
+<body>
+    <ul id="teste">
+        <li>Lista original</li>
+        <li>Segundo item</li>
+    </ul>
+
+    <button id="obterHTML">Obter HTML</button>
+
+    <div id="externo">
+        <p>O Shadow não funciona para você</p>
+    </div>
+
+    <script>
+        document.getElementById("obterHTML").addEventListener("click", function () {
+            // Aqui você poderia substituir por fetch para carregar o conteúdo externo
+            fetch("src/new2.html")
+                .then(resposta => resposta.text())
+                .then(html => {
+                    const tempDiv = document.createElement("div");
+                    tempDiv.innerHTML = html;
+
+                    // Obtém o template
+                    const template = tempDiv.querySelector("#novoConteudo");
+
+                    // Seleciona o div correto
+                    const div = document.querySelector("#externo");
+
+                    // Verifica se o div suporta shadow DOM e anexa
+                    // Cria o shadow Dom e anexa ao  div
+                    let shadow = div.attachShadow({mode: "open"});
+                    shadow.appendChild(template.content.cloneNode(true));
+                })
+                .catch(error => console.log("Erro ao carregar HTML: ",  error));
+        }, false);
+    </script>
+</body>
+</html>

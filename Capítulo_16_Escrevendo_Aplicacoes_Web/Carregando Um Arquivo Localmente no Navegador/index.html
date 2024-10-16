@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitor de Imagem</title>
+    <style>
+        #resultado {
+            width: 500px;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Leitor de Imagem</h1>
+
+    <form action="#">
+        <label for="arquivo">Arquivo:</label>
+        <input type="file" id="arquivo" accept=".jpg, .jpeg, .png">
+    </form>
+
+    <div id="resultado">
+        <ul>
+            <li>Nome da Imagem: <span id="nome"></span></li>
+            <li>Tipo da Imagem: <span id="tipo"></span></li>
+        </ul>
+    </div>
+
+    <script>
+        const entradaElemento = document.getElementById("arquivo");
+        const resultado = document.getElementById("resultado");
+        const nomeElemento = document.getElementById("nome");
+        const tipoElemento = document.getElementById("tipo");
+
+        function manipularArquivo() {
+            // Lê o conteúdo do arquivo
+            const arquivo = this.files[0];
+            const leitor = new FileReader();
+
+            // Adiciona manipulador de evento load
+            leitor.addEventListener("load", evento => {
+                // Cria o elemento de imagem e exiba-o dentro do div de resultado
+                const img = document.createElement("img");
+                img.setAttribute("src", evento.target.result);
+                img.setAttribute("width", "250");
+                resultado.appendChild(img);
+
+                // Mostra o nome e tipo do arquivo imagem
+                const nome = document.createTextNode(arquivo.name);
+                const tipo = document.createTextNode(arquivo.type);
+                nomeElemento.appendChild(nome);
+                tipoElemento.appendChild(tipo);
+            });
+            leitor.readAsDataURL(arquivo);
+        }
+        
+        entradaElemento.addEventListener('change', manipularArquivo, false);
+    </script>
+</body>
+</html>
