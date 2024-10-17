@@ -1,0 +1,2 @@
+Eu vou escrever esse texto em um arquivo
+Eu vou adicionar esse texto ao arquivo

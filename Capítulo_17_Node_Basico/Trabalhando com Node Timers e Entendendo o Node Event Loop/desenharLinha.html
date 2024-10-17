@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Exemplo</title>
+    <script>
+        window.onload = function() {
+            const socket = new WebSocket("ws://localhost:8001");
+
+            socket.onopen = function() {
+                console.log("Conectado ao WebSocket!");
+            };
+
+            socket.onmessage = function(event) {
+                const data = JSON.parse(event.data);
+                document.getElementById("counter").innerText = "Valor recebido: " + data.counter;
+            };
+
+            socket.onclose = function() {
+                console.log("Conexão WebSocket fechada");
+            };
+        };
+    </script>
+</head>
+<body>
+    <h1>Exemplo WebSocket</h1>
+    <p id="counter">Aguardando valor...</p>
+</body>
+</html>

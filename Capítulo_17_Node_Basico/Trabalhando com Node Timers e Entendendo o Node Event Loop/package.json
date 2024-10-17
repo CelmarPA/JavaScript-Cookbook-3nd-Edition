@@ -1,0 +1,15 @@
+{
+  "name": "trabalhando-com-node-timers-e-entendendo-o-node-event-loop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "nodejs-websocket": "^1.7.2"
+  }
+}
