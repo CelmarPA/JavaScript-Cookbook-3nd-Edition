@@ -1,0 +1,15 @@
+{
+  "name": "acessando-a-funcionalidade-da-linha-de-comando-sentro-de-uma-aplicacao-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "imagemagick": "^0.1.3"
+  }
+}
