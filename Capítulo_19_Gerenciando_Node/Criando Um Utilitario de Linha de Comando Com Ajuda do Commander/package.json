@@ -1,0 +1,21 @@
+{
+  "name": "criando-um-utilitario-de-linha-de-comando-com-ajuda-do-commander",
+  "version": "1.0.0",
+  "main": "snapshot.js",
+  "preferGlobal": true,
+  "bin": {
+    "snapshot": "snapshot.js",
+    "square": "quadrado.js"
+  },
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "commander": "^4.1.1",
+    "puppeteer": "^2.1.1"
+  }
+}
