@@ -1,0 +1,10 @@
+html
+    head
+        title Página Usuário
+    body
+        h1 Perfil de #{usuarDados.nome}
+        ul
+            li 
+                image(src=usuarDados.avatar)
+            li #{usuarDados.nome}
+            li #{usuarDados.email}
