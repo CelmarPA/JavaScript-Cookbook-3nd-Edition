@@ -1,5 +1,5 @@
 {
-  "name": "obtendo-dados-remotos",
+  "name": "raspagem-de-tela",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "cheerio": "^1.0.0",
     "node-fetch": "^2.7.0"
   }
 }
