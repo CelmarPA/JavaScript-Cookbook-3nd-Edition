@@ -1,0 +1,16 @@
+{
+  "name": "servindo-dados-formatados",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.1",
+    "xmlbuilder": "^15.1.1"
+  }
+}

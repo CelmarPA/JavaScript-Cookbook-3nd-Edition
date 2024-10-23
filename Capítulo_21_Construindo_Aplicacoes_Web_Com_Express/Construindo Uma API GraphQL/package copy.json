@@ -1,0 +1,17 @@
+{
+  "name": "construindo-uma-api-graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "apollo-server-express": "^3.13.0",
+    "express": "^4.21.1",
+    "gql": "^1.1.2"
+  }
+}
